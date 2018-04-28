@@ -1,3 +1,58 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* meyer resets end here */
+
+
+
+
+
+
 html {
     box-sizing: border-box;
 }
@@ -6,45 +61,43 @@ html {
     box-sizing: inherit;
 }
 
-/*
-.no-js {
-    visibility: hidden;
-    opacity: 0;
-}
-
-.js {
-    visibility: visible;
-    opacity: 1;
-}  */
 
 @font-face {
+    font-family:'renner_lightlight';
+    font-style: normal;
+    font-weight: normal;
+    src:local('renner '),url('../font/renner-light-webfont.woff2')format('woff2'),
+	url('../font/renner-light-webfont.woff')format('woff'),
+	url('../font/renner-light-webfont.ttf')format('truetype'),
+	url('../font/renner-light-webfont.eot')format('embedded-opentype');
+    unicode-range: U+00-FF; /* Define the available characters */
+}
+
+/@font-face {
+    font-family:'rennerbold';
+    font-style: normal;
+    font-weight: normal;
+    src:local('renner bold'),url('../font/renner-bold-webfont.woff2')format('woff2'),
+	url('../font/renner-bold-webfont.woff')format('woff'),
+	url('../font/renner-bold-webfont.ttf')format('truetype'),
+	url('../font/renner-bold-webfont.eot')format('embedded-opentype');
+    unicode-range: U+00-FF; /* Define the available characters */
+}
+
+
+
+/@font-face {
     font-family: 'renner-light';
-    src: url(../font/Renner-Light.otf);
+    src: url(../font/renner_lightlight.otf);
 }
 
-var font=new FontFaceObserver('renner-light');
-font.load().then(function () {
-    console.log('renner-light has loaded.');
-}
-
-);
-@font-face {
-    font-family: 'renner-light';
-    src: url(../font/Renner-Light.otf) format('otf'),
-}
-
-@font-face {
-    font-family: 'renner-book';
-    src: url(../font/Renner-Book.otf);
-}
-
-@font-face {
+/@font-face {
     font-family: 'renner-bold';
     src: url(../font/Renner-Bold.otf);
 }
 
 body {
-    font-family: 'renner-light', sans-serif;
+    font-family: 'renner_lightlight', sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -53,7 +106,7 @@ body {
 h1 {
     font-size: 1em;
     line-height: 1.9em;
-    font-family: 'renner-book', sans-serif;
+    font-family: 'renner_lightlight', sans-serif;
     padding: 30px 0 10px;
     color: #F79630;
     letter-spacing: 0.1em;
@@ -230,11 +283,11 @@ nav ul a:hover {
 }
 
 .header img {
-    animation: move 10s ease-in-out forwards;
-    -ms-animation: move 10s ease-in-out forwards;
-    -webkit-animation: move 10s ease-in-out forwards;
-    -0-animation: move 10s ease-in-out forwards;
-    -moz-animation: move 10s ease-in-out forwards;
+    animation: move 14s ease-in-out forwards;
+    -ms-animation: move 14s ease-in-out forwards;
+    -webkit-animation: move 14s ease-in-out forwards;
+    -0-animation: move 14s ease-in-out forwards;
+    -moz-animation: move 14s ease-in-out forwards;
     width: 100vw;
     height: 100vh;
     object-fit: cover;
@@ -319,7 +372,7 @@ nav ul a:hover {
     font-size: 36px;
     margin-bottom: 20px;
     color: #fff;
-    padding: 5px 15px;
+    padding: 5px 18px;
     background-color: #F27316;
     box-shadow: 3px 4px 15px 1px rgba(0, 0, 0, .4);
     letter-spacing: 0.15em;
@@ -328,7 +381,8 @@ nav ul a:hover {
 
 .headerp {
     font-size: 28px;
-    font-family: 'renner-book';
+    font-family: 'renner_lightlight';
+	margin-top: 15px;
     margin-bottom: 10px;
     text-align: center;
     line-height: 1.5;
@@ -613,14 +667,14 @@ nav ul a:hover {
 footer {
     position: relative;
     z-index: 0;
-    height: 400px;
+    height: 350px;
     width: 100%;
 }
 
 .contact {
     background-color: #353540;
     width: 100vw;
-    height: 400px;
+    height: 350px;
     position: fixed;
     bottom: 0;
     z-index: 1;
@@ -634,8 +688,8 @@ footer {
 .credits {
     background-color: #353540;
     position: fixed;
-    bottom: 0;
-    padding: 30px 0 50px;
+    bottom: 60px;
+    padding: 0px 0 0px;
     width: 100%;
     color: #53c2d1;
     text-transform: uppercase;
@@ -699,14 +753,6 @@ footer {
     }
 }
 
-/@media screen and (max-width: 740px) {
-    .credits ul {
-        width: 80%;
-    }
-    .name {
-        font-size: 1em;
-    }
-}
 
 @media screen and (max-width: 595px) {
     .header-h1 {
@@ -757,88 +803,11 @@ footer {
     }
 }
 
-/@media screen and (max-width: 570px) {
-    .visibletext {
-        font-size: 1em;
-        padding: 0 8%;
-    }
-    .wrap {
-        height: 450vw;
-    }
-    .box {
-        margin: 7px 0;
-        width: 100%;
-        clear: both;
-    }
-    .wrapl {
-        height: 50%;
-        float: none;
-        display: block;
-        margin: auto;
-    }
-    .wrapr {
-        height: 50%;
-        display: block;
-        float: none;
-    }
-    .title {
-        width: 70%;
-    }
-}
+
 
 @media screen and (max-width: 470px) {
     .visibletext {
         font-size: 0.9em;
         padding: 0 30px;
-    }
-}
-
-/@media screen and (max-width: 400px) {
-    .visibletext {
-        font-size: 0.8em;
-        text-align: left;
-        padding: 0 25px;
-    }
-    .textposition {
-        top: 20px;
-    }
-    .name {
-        font-size: 0.8em;
-    }
-}
-
-/@media screen and (max-width: 340px) {
-    .header {
-        height: 100vh;
-    }
-    .visibletext {
-        padding: 0 10px;
-    }
-    span.frame {
-        display: none;
-    }
-    body {
-        font-size: 0.9em;
-    }
-    footer {
-        height: 570px;
-    }
-    .contact {
-        height: 570px;
-    }
-}
-
-/@media screen and (max-width: 295px) {
-    .textposition {
-        top: 10px;
-    }
-    body {
-        font-size: 0.8em;
-    }
-    footer {
-        height: 530px;
-    }
-    .contact {
-        height: 530px;
     }
 }

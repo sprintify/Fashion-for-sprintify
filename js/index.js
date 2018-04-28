@@ -1,3 +1,4 @@
+/* ScrollReveal functions */
 $(document).ready(function() {
   $(".menu-toggle").on('click', function() {
     $(this).toggleClass("on");
@@ -6,7 +7,7 @@ $(document).ready(function() {
   });
 
   var reveal = {
-  delay    : 100,
+  delay    : 65,
   duration : 900,
   distance : '15px',
   easing   : 'ease',
@@ -22,31 +23,3 @@ $(document).ready(function() {
 	distance:'300px'
 });
 });
-    
-
-/*external js
-https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js
-https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js
-*/
-
-window.onload = function () {
-    var logo = document.getElementById("logo");
-    TweenLite.from(logo, 1.5, {
-        ease: Back.easeOut.config(1.7),
-        opacity: 0,
-        left: '130%',
-        delay: 3,
-        scaleX:1.8, scaleY:1.8
-    });
-    
-    
-   
-}
-
-
-
-
-
-
-
-
