@@ -22,6 +22,17 @@ html {
     src: url(../font/Renner-Light.otf);
 }
 
+var font=new FontFaceObserver('renner-light');
+font.load().then(function () {
+    console.log('renner-light has loaded.');
+}
+
+);
+@font-face {
+    font-family: 'renner-light';
+    src: url(../font/Renner-Light.otf) format('otf'),
+}
+
 @font-face {
     font-family: 'renner-book';
     src: url(../font/Renner-Book.otf);
