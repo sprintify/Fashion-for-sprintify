@@ -1,32 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-	<title>Sprintify | site make ultrafast websites below 2 seconds and less</title>
+	<title>Sprintify fashion</title>
 	<description>Feed created by FiveFilters.org</description>
-	<link>http://sprintify.site/</link>
+	<link>https://fashion-fashion.netlify.com/</link>
 	<item>
-		<title>Sprintify | site</title>
-		<link>http://sprintify.site/index.html</link>
+		<title>HOME</title>
+		<link>https://fashion-fashion.netlify.com/#index</link>
 		<description></description>
 	</item>
 	<item>
-		<title>News</title>
-		<link>http://sprintify.site/news.html</link>
+		<title>MODELS</title>
+		<link>https://fashion-fashion.netlify.com/#about</link>
 		<description></description>
 	</item>
 	<item>
-		<title>Contact</title>
-		<link>http://sprintify.site/#</link>
-		<description></description>
-	</item>
-	<item>
-		<title>Get started</title>
-		<link>http://sprintify.site/getstarted.html</link>
-		<description></description>
-	</item>
-	<item>
-		<title>Blog</title>
-		<link>http://sprintify.site/blog.html</link>
+		<title>CONTACT</title>
+		<link>https://fashion-fashion.netlify.com/#contact</link>
 		<description></description>
 	</item>
 </channel>
